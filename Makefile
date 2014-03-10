@@ -1,26 +1,21 @@
 
-COMPONENT = node_modules/.bin/component
-MYTH = node_modules/.bin/myth
-SRC = component.json lib/boot/index.js lib/boot/template.js
-SRC+= lib/boot/emergency.css lib/boot/component.json
+CSS = $(shell find app -iname "*.mcss")
+SRC:= $(shell find -E app -regex '.*(html|js|js(on)?)$$')
+SRC+= $(CSS:%.mcss=%.css)
 
 
 public: components $(SRC)
-	@$(COMPONENT) build --use component-autoboot --out public --name emergency
+	@component build --use component-autoboot --out public --name emergency
 
-components:
-	@$(COMPONENT) install
-
-%.js: %.html
-	@$(COMPONENT) convert $<
+components: component.json $(shell find app -name "component.json")
+	@component install
 
 %.css: %.mcss
-	@$(MYTH) $< $@
+	@myth $< $@
 
 clean:
-	rm -fr components
-	rm public/emergency.{css,js}
+	rm -fr components public
 
 
-.PHONY: clean public
+.PHONY: clean
 

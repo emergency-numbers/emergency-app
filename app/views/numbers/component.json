@@ -1,27 +1,22 @@
 {
-  "name": "emergency",
-  "repo": "emergency-numbers/emergency",
-  "description": "Emergency numbers for the location your at",
+  "name": "numbers-view",
+  "repo": "emergency-numbers/numbers-view",
+  "description": "Numbers view",
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "driftyco/ionicons": "*",
+    "component/domify": "*",
     "emergency-numbers/emergency-numbers": "*",
     "emergency-numbers/view-emergency-numbers": "*",
     "segmentio/list": "*",
     "segmentio/view": "*",
-    "timoxley/next-tick": "*",
-    "typefaces/montserrat": "*",
     "visionmedia/superagent": "*"
   },
   "development": {},
   "license": "MIT",
   "main": "index.js",
-  "scripts": [
-    "index.js",
-    "template.js"
-  ],
-  "styles": [
-    "emergency.css"
-  ]
+  "images": ["images/background.jpg"],
+  "templates": ["template.html"],
+  "scripts": ["index.js"],
+  "styles": ["numbers-view.css"]
 }

@@ -1,0 +1,27 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: radial-gradient(circle farthest-side at right bottom,rgb(254, 253, 254) 5%,rgb(248, 205, 218) 25%,rgb(29, 43, 100) 80%,rgb(14, 21, 58) 98%);
+  background-attachment: fixed;
+  color: rgb(60, 60, 60);
+  font-family: Montserrat, Helvetica;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  box-sizing: border-box;
+  padding: 1.4em;
+}
+

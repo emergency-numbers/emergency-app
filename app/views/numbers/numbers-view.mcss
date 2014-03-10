@@ -1,0 +1,36 @@
+
+:root {
+  var-red: rgb(251, 100, 96);
+  var-blue: rgb(33, 176, 210);
+  var-green: rgb(44, 222, 202);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  a[href^=tel] {
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    box-sizing: border-box;
+    color: rgba(255,255,255,.9);
+    display: block;
+    padding: 1.4em;
+    text-transform: capitalize;
+    transition: all .2s ease;
+  }
+    a[href^=tel]:hover, a[href^=tel]:active {
+      background: rgba(255,255,255,.1);
+      color: rgb(255,255,255);
+    }
+    a[href^=tel]::after {
+      content: '\f1e5';
+      display: inline-block;
+      float: right;
+      font-family: Ionicons;
+      margin-right: .3em;
+    }
+    a[href^=tel]:active::after, a[href^=tel]:hover::after {
+      content: '\f1e6';
+    }
+
